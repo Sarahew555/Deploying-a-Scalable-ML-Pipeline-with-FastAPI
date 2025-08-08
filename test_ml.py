@@ -1,4 +1,5 @@
 import pytest
+import numpy as np
 from sklearn.svm import SVC
 from ml.model import train_model
 from ml.data import process_data
