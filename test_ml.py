@@ -14,7 +14,7 @@ def test_model_returns_exp_algorithm():
     """
     Test 1 verifies that the trained model object is the same as the expected algorithm type.
     """
-    X_test_train = np.array([[1, 2], [3, 4], [5, 6]]))
+    X_test_train = np.array([[1, 2], [3, 4], [5, 6]])
     y_test_train = np.array([0, 1, 0])
     trained_model = train_model(X_test_train, y_test_train)
     assert isinstance(trained_model, SVC)
