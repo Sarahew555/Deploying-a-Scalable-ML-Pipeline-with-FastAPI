@@ -3,6 +3,7 @@ from sklearn.svm import SVC
 from ml.model import train_model
 from ml.data import process_data
 from ml.model import compute_model_metrics
+from ml.data import apply_label
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 
 # TODO: add necessary import
@@ -20,7 +21,7 @@ def test_model_returns_exp_algorithm():
 # TODO: implement the second test. Change the function name and input as needed
 def test_model_metrics_expected_values():
     """
-    Check that 
+    Test 2 verifies that the expected values for metrics are close to actual values.
     """
     y_true = np.array([1, 1, 0, 1, 0, 0, 1])
     y_pred = np.array([1, 0, 0, 1, 1, 0, 1])
@@ -38,9 +39,11 @@ def test_model_metrics_expected_values():
 
 
 # TODO: implement the third test. Change the function name and input as needed
-def test_three():
+def test_binary_label():
     """
-    # add description for the third test
+    Test 3 checks that the binary label representing >50K returns the correct output
     """
-    # Your code here
-    pass
+    inference_input = [1]
+    expected_output = ">50K"
+    actual_output = apply_label(inference_input)
+    assert actual_output == expected_output
