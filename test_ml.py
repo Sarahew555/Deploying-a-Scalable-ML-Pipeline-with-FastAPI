@@ -10,17 +10,16 @@ def test_model_returns_exp_algorithm():
     """
     Test 1 verifies that the trained model object is the same as the expected algorithm type.
     """
-    X, y = 
     model = train_model(X, y)
     assert isinstance(model, SVC)
 
 # TODO: implement the second test. Change the function name and input as needed
-def test_two():
+def test_model_metrics_expected_values():
     """
-    # add description for the second test
+    Check that 
     """
-    # Your code here
-    pass
+    
+    
 
 
 # TODO: implement the third test. Change the function name and input as needed
