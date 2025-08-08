@@ -14,8 +14,8 @@ def test_model_returns_exp_algorithm():
     """
     Test 1 verifies that the trained model object is the same as the expected algorithm type.
     """
-    X_test_train = np.array()
-    y_test_train = np.array()
+    X_test_train = np.array([[1, 2], [3, 4], [5, 6]]))
+    y_test_train = np.array([0, 1, 0])
     trained_model = train_model(X_test_train, y_test_train)
     assert isinstance(trained_model, SVC)
 
@@ -29,7 +29,7 @@ def test_model_metrics_expected_values():
 
     expected_precision = precision_score(y_true, y_pred, zero_division=1)
     expected_recall = recall_score(y_true, y_pred, zero_division=1)
-    expected_fbeta = fbeta_score(y_true, y_pred, zero_division=1)
+    expected_fbeta = fbeta_score(y_true, y_pred, beta=1, zero_division=1)
 
     precision, recall, fbeta = compute_model_metrics(y_true, y_pred)
 
