@@ -10,8 +10,10 @@ def test_model_returns_exp_algorithm():
     """
     Test 1 verifies that the trained model object is the same as the expected algorithm type.
     """
-    model = train_model(X, y)
-    assert isinstance(model, SVC)
+    X_test_train = np.array()
+    y_test_train = np.array()
+    trained_model = train_model(X_test_train, y_test_train)
+    assert isinstance(trained_model, SVC)
 
 # TODO: implement the second test. Change the function name and input as needed
 def test_model_metrics_expected_values():
