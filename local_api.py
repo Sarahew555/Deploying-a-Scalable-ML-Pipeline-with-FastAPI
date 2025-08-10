@@ -33,6 +33,6 @@ data = {
 r = requests.post(url=url+"/data/", json=data) # Your code here
 
 # TODO: print the status code
- print(f'Status Code: {r.status_code}'))
+ print(f'Status Code: {r.status_code}')
 # TODO: print the result
-print(f'Results: {r.json()}'))
+print(f'Results: {r.json()}')
