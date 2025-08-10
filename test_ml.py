@@ -1,5 +1,6 @@
 import pytest
-from ml.model import train_model
+from ml.model import train_model, compute_model_metrics
+import numpy as np
 # TODO: add necessary 
 
 # TODO: implement the first test. Change the function name and input as needed
@@ -18,8 +19,13 @@ def test_two():
     """
     # add description for the second test
     """
-    # Your code here
-    pass
+    y_true = np.array([0, 1, 0, 1, 0, 1])
+    y_pred = np.array([0, 1, 0, 1, 0, 1])
+    precision, recall, fbeta = compute_model_metrics(y_true, y_pred)
+
+    self.assertAlmostEqual(precision, 1.0)
+    self.assertAlmostEqual(recall, 1.0)    
+    self.assertAlmostEqual(fbeta, 1.0)   
 
 
 # TODO: implement the third test. Change the function name and input as needed
