@@ -28,7 +28,7 @@ def test_two():
     y_pred = np.array([0, 1, 0, 1, 0, 1])
     precision, recall, fbeta = compute_model_metrics(y_true, y_pred)
     assert precision == approx(1.0) 
-    assert recall == approc(1.0)
+    assert recall == approx(1.0)
     assert fbeta == approx(1.0)
 
 # TODO: implement the third test. Change the function name and input as needed
