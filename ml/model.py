@@ -1,6 +1,8 @@
 import pickle
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from ml.data import process_data
+import xgboost as xgb
+from sklearn.datasets import make_classification
 # TODO: add necessary import
 
 # Optional: implement hyperparameter tuning.
