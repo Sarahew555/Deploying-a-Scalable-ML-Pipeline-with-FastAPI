@@ -3,6 +3,7 @@ from ml.model import train_model, compute_model_metrics, inference
 import numpy as np
 import unittest
 from unittest import mock
+from pytest import approx
 import xgboost as xgb
 # TODO: add necessary 
 
@@ -22,14 +23,13 @@ def test_two():
     """
     # add description for the second test
     """
+    
     y_true = np.array([0, 1, 0, 1, 0, 1])
     y_pred = np.array([0, 1, 0, 1, 0, 1])
     precision, recall, fbeta = compute_model_metrics(y_true, y_pred)
-
-    assertAlmostEqual(precision, 1.0)
-    assertAlmostEqual(recall, 1.0)    
-    assertAlmostEqual(fbeta, 1.0)   
-
+    assert precision == approx(1.0) 
+    assert recall == approc(1.0)
+    assert fbeta == approx(1.0)
 
 # TODO: implement the third test. Change the function name and input as needed
 def test_three():
