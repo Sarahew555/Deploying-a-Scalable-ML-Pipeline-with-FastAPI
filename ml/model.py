@@ -20,7 +20,7 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
-    model = xbg.XBGClassifier(random_state=4)
+    model = xgb.XBGClassifier(random_state=4)
     model.fit(X_train, y_train)
     return model
 
