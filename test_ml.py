@@ -3,7 +3,7 @@ from ml.model import train_model, compute_model_metrics, inference
 import numpy as np
 import unittest
 from unittest import mock
-from xgboost as xgb
+import xgboost as xgb
 # TODO: add necessary 
 
 # TODO: implement the first test. Change the function name and input as needed
