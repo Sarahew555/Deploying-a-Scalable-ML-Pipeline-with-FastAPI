@@ -3,6 +3,7 @@ from ml.model import train_model, compute_model_metrics, inference
 import numpy as np
 import unittest
 from unittest import mock
+from xgboost import XGBClassifier
 # TODO: add necessary 
 
 # TODO: implement the first test. Change the function name and input as needed
@@ -25,9 +26,9 @@ def test_two():
     y_pred = np.array([0, 1, 0, 1, 0, 1])
     precision, recall, fbeta = compute_model_metrics(y_true, y_pred)
 
-    self.assertAlmostEqual(precision, 1.0)
-    self.assertAlmostEqual(recall, 1.0)    
-    self.assertAlmostEqual(fbeta, 1.0)   
+    assertAlmostEqual(precision, 1.0)
+    assertAlmostEqual(recall, 1.0)    
+    assertAlmostEqual(fbeta, 1.0)   
 
 
 # TODO: implement the third test. Change the function name and input as needed
